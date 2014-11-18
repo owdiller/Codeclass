@@ -1,12 +1,19 @@
-<h1>Reports</h1>
-
+<h1>Progress</h1>
 <p><a href="/new_report">Add a New Report</a></p>
 
 <table>
   <thead>
     <tr>
       <th>Student</th>
-      <th>Comment</th>
+            <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>  
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+      <th>Report</th>
+            <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>  
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
       <th>Date</th>
       <th></th>
       <th></th>
@@ -18,12 +25,32 @@
   <% @reports.each do |report| %>
     <tr>
       <td><%= report.student_id %></td>
+            <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>  
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
           <td><%= report.comment %></td>
+            <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>  
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
           <td><%= report.date %></td>
-          <td><a href="/reports/<%= report.id %>">Show</a>
+            <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>  
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+          <td><a href="/reports/<%= report.id %>">Show Report</a>
         </td>
-      <td><a href="/reports/<%= report.id %>/edit">Edit</a></td>
-      <td><a href="/reports/<%= report.id %>/destroy">Destroy</a></td>
+            <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>  
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+      <td><a href="/reports/<%= report.id %>/edit">Edit Report</a></td>
+            <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>  
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+      <td><a href="/reports/<%= report.id %>/destroy">Delete Report</a></td>
     </tr>
   <% end %>
   </tbody>

@@ -2,29 +2,34 @@
 <h2>Your ID is <%= @student.id %> ... use this to tag your assignments! </h2>
 
 <div>
-  <strong>Username</strong>:<br />
+  <strong>Name</strong>:<br />
   <p><%= @student.username %></p>
 </div>
 <div>
-  <strong>Email</strong>:<br />
+  <strong>e-mail</strong>:<br />
   <p><%= @student.email %></p>
 </div>
 <div>
-  <strong>Img</strong>:<br />
-  <p><%= @student.img %></p>
+  <strong>Profile Picture</strong>:<br />
+  <p><img src="<%= @student.img %>" height=300px width=300px></p>
 </div>
 <div>
-  <strong>Bio</strong>:<br />
+  <strong>Biography</strong>:<br />
   <p><%= @student.bio %></p>
 </div>
+<br>
+<br>
+<br>
 
+<h5> Reports by <em><%=@student.username%></em>:  </h5>
+<br>
 <ul>
   <% @reports.each do |report| %>
-  <li> <%= report.comment %> </li>
+  <li> <%= report.comment %> <b>on <%= report.date %></b></li>
+  <br>
   <% end %>
 </ul>
 
-
-
-<a href="/students/<%= @student.id %>/edit">Edit</a> |
-<a href="/students/<%= @student.id %>/destroy">Destroy</a>
+<a href="/students">Return to Students index</a> |
+<a href="/students/<%= @student.id %>/edit">Edit Profile</a> |
+<a href="/students/<%= @student.id %>/destroy">Delete Profile</a>

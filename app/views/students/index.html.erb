@@ -1,31 +1,45 @@
 <h1>Students</h1>
 
-<p><a href="/new_student">Add a New Student</a></p>
+<p><a href="/new_student">Enroll in Class</a></p>
 
 <table>
   <thead>
     <tr>
-      <th>Username</th>
-      <th>Email</th>
-      <th>Img</th>
-      <th>Bio</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Name</th>
+      <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>  
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+      <th>Profile Picture</th>
+
     </tr>
   </thead>
 
   <tbody>
   <% @students.each do |student| %>
     <tr>
-          <td><%= student.username %></td>
-          <td><%= student.email %></td>
-          <td><%= student.img %></td>
-          <td><%= student.bio %></td>
-          <td><a href="/students/<%= student.id %>">Show</a>
+          <td><em><%= student.username %></em></td>
+      <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>  
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+          <td><img src= "<%= student.img %>" height=100px width=100px></td>
+      <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>  
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+          <td><a href="/students/<%= student.id %>">Show Student Profile</a>
         </td>
-      <td><a href="/students/<%= student.id %>/edit">Edit</a></td>
-      <td><a href="/students/<%= student.id %>/destroy">Destroy</a></td>
+      <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>  
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+      <td><a href="/students/<%= student.id %>/edit">Edit Student Profile</a></td>
+        <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>  
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+      <td><a href="/students/<%= student.id %>/destroy">Delete Student Profile</a></td>
     </tr>
   <% end %>
   </tbody>

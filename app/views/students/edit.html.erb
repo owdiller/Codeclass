@@ -1,23 +1,24 @@
-<h1>Editing Student #<%= @student.id %></h1>
+<h1>Editing Your Profile</h1>
 
 <form action="/students/<%= @student.id %>/update">
   <div>
-    <label for="username">username</label><br />
+    <label for="username">Name</label><br />
     <input id="username" name="username" value="<%= @student.username  %>" type="text" />
   </div>
   <div>
-    <label for="email">email</label><br />
+    <label for="email">e-mail</label><br />
     <input id="email" name="email" value="<%= @student.email  %>" type="text" />
   </div>
   <div>
-    <label for="img">img</label><br />
+    <label for="img">Profile Picture</label><br />
     <input id="img" name="img" value="<%= @student.img  %>" type="text" />
   </div>
   <div>
-    <label for="bio">bio</label><br />
+    <label for="bio">Biography</label><br />
     <input id="bio" name="bio" value="<%= @student.bio  %>" type="text" />
   </div>
   <div>
+    <br>
     <input type="submit">
   </div>
 </form>

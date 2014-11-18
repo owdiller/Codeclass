@@ -6,9 +6,11 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Email</th>
+            <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>  
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
       <th>Img</th>
-      <th>Bio</th>
       <th></th>
       <th></th>
       <th></th>
@@ -19,13 +21,27 @@
   <% @teachers.each do |teacher| %>
     <tr>
           <td><%= teacher.name %></td>
-          <td><%= teacher.email %></td>
-          <td><%= teacher.img %></td>
-          <td><%= teacher.bio %></td>
-          <td><a href="/teachers/<%= teacher.id %>">Show</a>
+      <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>  
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+          <td><img src="<%= teacher.img %>" height=100px width=100px></td>
+      <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>  
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+          <td><a href="/teachers/<%= teacher.id %>">Show Profile</a>
         </td>
-      <td><a href="/teachers/<%= teacher.id %>/edit">Edit</a></td>
-      <td><a href="/teachers/<%= teacher.id %>/destroy">Destroy</a></td>
+            <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>  
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+      <td><a href="/teachers/<%= teacher.id %>/edit">Edit Profile</a></td>
+            <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>  
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+      <td><a href="/teachers/<%= teacher.id %>/destroy">Delete Profile</a></td>
     </tr>
   <% end %>
   </tbody>

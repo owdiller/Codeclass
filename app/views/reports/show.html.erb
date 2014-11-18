@@ -5,13 +5,13 @@
   <p><%= @student.username %></p>
 </div>
 <div>
-  <strong>Comment</strong>:<br />
+  <strong>Report</strong>:<br />
   <p><%= @report.comment %></p>
 </div>
 <div>
   <strong>Date</strong>:<br />
   <p><%= @report.date %></p>
 </div>
-
-<a href="/reports/<%= @report.id %>/edit">Edit</a> |
-<a href="/reports/<%= @report.id %>/destroy">Destroy</a>
+<a href="/reports">Return to Comments index</a> |
+<a href="/reports/<%= @report.id %>/edit">Edit Report</a> |
+<a href="/reports/<%= @report.id %>/destroy">Delete Report</a>

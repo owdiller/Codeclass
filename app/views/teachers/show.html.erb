@@ -1,21 +1,18 @@
-<h1>Teacher #<%= @teacher.id %></h1>
+<h1>Mr. Essenberg</h1>
+
 
 <div>
-  <strong>Name</strong>:<br />
-  <p><%= @teacher.name %></p>
-</div>
-<div>
-  <strong>Email</strong>:<br />
+  <strong>e-mail</strong>:<br />
   <p><%= @teacher.email %></p>
 </div>
 <div>
-  <strong>Img</strong>:<br />
-  <p><%= @teacher.img %></p>
+  <strong>Profile Picture</strong>:<br />
+  <p><img src="<%= @teacher.img %>" height=300px width=300px></p>
 </div>
 <div>
-  <strong>Bio</strong>:<br />
+  <strong>Biography</strong>:<br />
   <p><%= @teacher.bio %></p>
 </div>
-
-<a href="/teachers/<%= @teacher.id %>/edit">Edit</a> |
-<a href="/teachers/<%= @teacher.id %>/destroy">Destroy</a>
+<a href="/teachers">Return to Teacher index</a> |
+<a href="/teachers/<%= @teacher.id %>/edit">Edit Teacher Profile</a> |
+<a href="/teachers/<%= @teacher.id %>/destroy">Delete Profile</a>
