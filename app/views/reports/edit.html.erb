@@ -1,0 +1,21 @@
+<h1>Editing Report #<%= @report.id %></h1>
+
+<form action="/reports/<%= @report.id %>/update">
+  <div>
+    <label for="student_id">student_id</label><br />
+    <input id="student_id" name="student_id" value="<%= @report.student_id  %>" type="text" />
+  </div>
+  <div>
+    <label for="comment">comment</label><br />
+    <input id="comment" name="comment" value="<%= @report.comment  %>" type="text" />
+  </div>
+  <div>
+    <label for="date">date</label><br />
+    <input id="date" name="date" value="<%= @report.date  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

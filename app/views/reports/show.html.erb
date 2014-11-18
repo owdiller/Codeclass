@@ -1,0 +1,17 @@
+<h1>Report #<%= @report.id %></h1>
+
+<div>
+  <strong>Student</strong>:<br />
+  <p><%= @student.username %></p>
+</div>
+<div>
+  <strong>Comment</strong>:<br />
+  <p><%= @report.comment %></p>
+</div>
+<div>
+  <strong>Date</strong>:<br />
+  <p><%= @report.date %></p>
+</div>
+
+<a href="/reports/<%= @report.id %>/edit">Edit</a> |
+<a href="/reports/<%= @report.id %>/destroy">Destroy</a>

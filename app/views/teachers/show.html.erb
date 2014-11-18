@@ -1,0 +1,21 @@
+<h1>Teacher #<%= @teacher.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @teacher.name %></p>
+</div>
+<div>
+  <strong>Email</strong>:<br />
+  <p><%= @teacher.email %></p>
+</div>
+<div>
+  <strong>Img</strong>:<br />
+  <p><%= @teacher.img %></p>
+</div>
+<div>
+  <strong>Bio</strong>:<br />
+  <p><%= @teacher.bio %></p>
+</div>
+
+<a href="/teachers/<%= @teacher.id %>/edit">Edit</a> |
+<a href="/teachers/<%= @teacher.id %>/destroy">Destroy</a>

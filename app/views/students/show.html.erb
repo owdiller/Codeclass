@@ -1,0 +1,30 @@
+<h1>Student #<%= @student.id %></h1>
+<h2>Your ID is <%= @student.id %> ... use this to tag your assignments! </h2>
+
+<div>
+  <strong>Username</strong>:<br />
+  <p><%= @student.username %></p>
+</div>
+<div>
+  <strong>Email</strong>:<br />
+  <p><%= @student.email %></p>
+</div>
+<div>
+  <strong>Img</strong>:<br />
+  <p><%= @student.img %></p>
+</div>
+<div>
+  <strong>Bio</strong>:<br />
+  <p><%= @student.bio %></p>
+</div>
+
+<ul>
+  <% @reports.each do |report| %>
+  <li> <%= report.comment %> </li>
+  <% end %>
+</ul>
+
+
+
+<a href="/students/<%= @student.id %>/edit">Edit</a> |
+<a href="/students/<%= @student.id %>/destroy">Destroy</a>
