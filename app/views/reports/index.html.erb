@@ -1,6 +1,9 @@
 <h1>Progress</h1>
 <p><a href="/new_report">Add a New Report</a></p>
-
+<br>
+<br>
+<h5> **Reports hidden** </h5>
+      <% if session['username'] == "MASTERKEY"%>
 <table>
   <thead>
     <tr>
@@ -20,6 +23,8 @@
       <th></th>
     </tr>
   </thead>
+
+  
 
   <tbody>
   <% @reports.each do |report| %>
@@ -55,4 +60,4 @@
   <% end %>
   </tbody>
 </table>
-
+<%end%>

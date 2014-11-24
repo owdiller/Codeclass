@@ -18,9 +18,11 @@ class StudentsController < ApplicationController
     @student.email = params[:email]
     @student.img = params[:img]
     @student.bio = params[:bio]
+    @student.password = params[:password]
+      @student.password_confirmation = params[:password_confirmation]
 
     if @student.save
-      redirect_to "/students/#{ @student.id }"
+      redirect_to "/students/#{ @student.id }", :notice => "Student Profile Created"
     else
       render 'new'
     end
@@ -36,9 +38,11 @@ class StudentsController < ApplicationController
     @student.email = params[:email]
     @student.img = params[:img]
     @student.bio = params[:bio]
+    @student.password = params[:password]
+    @student.password_confirmation = params[:password_confirmation]
 
     if @student.save
-      redirect_to "/students/#{ @student.id }"
+      redirect_to "/students/#{ @student.id }", :notice => "updated!"
     else
       render 'edit'
     end
@@ -49,6 +53,6 @@ class StudentsController < ApplicationController
     @student.destroy
 
 
-    redirect_to "/students"
+    redirect_to "/students", :notice => "Student Deleted! IRON LAW!"
   end
 end

@@ -5,20 +5,33 @@
       text-align: center ;
 
     }
+    span {
+      text-align: right ;
+    }
   </style>
   <div class="btn-group">
-  <a href="/"><button type="button" class="btn btn-primary">Home</button></a>
+  <a href="/home"><button type="button" class="btn btn-primary">Home</button></a>
       <a href="/students"><button type="button" class="btn btn-danger">Students</button>
       <a href="/reports" ><button type="button" class="btn btn-success">Today I learned ......</button> </a>
       <a href="/teachers" ><button type="button" class="btn btn-warning">Teacher</button> </a>
       <a href="/about_class" ><button type="button" class="btn btn-info">About class</button> </a>
-</div>
+    </div>
+<span>
+  <% if session['username']  %>
+  <br>
+  <strong> Your Signed in, <%= session['username'] %> </strong>
+  <a href="/sessions/destroy">Sign out</a>
+  <%else%>
+  <br>
+     <a href="/">Sign In</a>
+  <%end%>
+</span>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   
 <head>
-  <title>Code</title>
+  <title>4th Hour</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>

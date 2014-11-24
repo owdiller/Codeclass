@@ -13,6 +13,7 @@
   <strong>Biography</strong>:<br />
   <p><%= @teacher.bio %></p>
 </div>
-<a href="/teachers">Return to Teacher index</a> |
+<a href="/teachers">Return to Teacher index</a>      <% if session['username'] == "MASTERKEY"%> |
 <a href="/teachers/<%= @teacher.id %>/edit">Edit Teacher Profile</a> |
 <a href="/teachers/<%= @teacher.id %>/destroy">Delete Profile</a>
+<%end%>

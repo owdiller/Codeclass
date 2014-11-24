@@ -20,16 +20,33 @@
 <br>
 <br>
 <br>
-
+<% if session['username'] == "MASTERKEY"%>
 <h5> Reports by <em><%=@student.username%></em>:  </h5>
 <br>
 <ul>
   <% @reports.each do |report| %>
-  <li> <%= report.comment %> <b>on <%= report.date %></b></li>
+  <li>I accomplished:<u> <%= report.comment %> </u><b>on <%= report.date %></b></li>
   <br>
   <% end %>
 </ul>
+<%end%>
 
-<a href="/students">Return to Students index</a> |
-<a href="/students/<%= @student.id %>/edit">Edit Profile</a> |
+<br>
+<br>
+<br>
+<% if session['username'] == @student.username%>
+<h5> Reports by <em><%=@student.username%></em>:  </h5>
+<br>
+<ul>
+  <% @reports.each do |report| %>
+  <li>I accomplished:<u> <%= report.comment %> </u><b>on <%= report.date %></b></li>
+  <br>
+  <% end %>
+</ul>
+<%end%>
+
+
+<a href="/students">Return to Students index</a> <% if session['username'] == @student.username%>|
+<a href="/students/<%= @student.id %>/edit">Edit Profile</a> <%end%><% if session['username'] == "MASTERKEY"%>|
 <a href="/students/<%= @student.id %>/destroy">Delete Profile</a>
+<%end%>

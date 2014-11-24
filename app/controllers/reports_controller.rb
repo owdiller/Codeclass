@@ -21,9 +21,11 @@ class ReportsController < ApplicationController
     @report.date = params[:date]
 
     if @report.save
-      redirect_to "/reports/#{ @report.id }"
+      redirect_to "/reports/#{ @report.id }", :notice => "Report Saved!"
+      
     else
-      render 'new'
+      
+      render 'new', :notice => "Something Went Wrong, Retry Report."
     end
   end
 

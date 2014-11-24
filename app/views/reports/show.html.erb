@@ -1,3 +1,7 @@
+<br>
+<br>
+<% if session['username'] == "MASTERKEY"%>
+
 <h1>Report #<%= @report.id %></h1>
 
 <div>
@@ -12,6 +16,8 @@
   <strong>Date</strong>:<br />
   <p><%= @report.date %></p>
 </div>
-<a href="/reports">Return to Comments index</a> |
+<%end%>
+<a href="/reports">Return to Comments index</a>     <% if session['username'] == "MASTERKEY"%>|
 <a href="/reports/<%= @report.id %>/edit">Edit Report</a> |
 <a href="/reports/<%= @report.id %>/destroy">Delete Report</a>
+<%end%>

@@ -5,6 +5,14 @@
     <label for="username">Name</label><br />
     <input id="username" name="username" value="<%= @student.username  %>" type="text" />
   </div>
+    <div>
+    <label for="password">Password</label><br />
+    <input id="password" name="password" type="password" placeholder="Enter a Password"/>
+  </div>
+    <div>
+    <label for="password_confirmation">Password Confirmation</label><br />
+    <input id="password_confirmation" name="password_confirmation" type="password" placeholder="Please repeat Password"/>
+  </div>
   <div>
     <label for="email">e-mail</label><br />
     <input id="email" name="email" value="<%= @student.email  %>" type="text" />

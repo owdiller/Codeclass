@@ -33,7 +33,13 @@
       <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
          <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
          <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>  
-         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
+         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>   
+      <% if session['username'] == student.username%>
+      <td><a href="/students/<%= student.id %>/edit">Edit Student Profile</a></td>
+            <%end%>
+<td></td>
+
+      <% if session['username'] == "MASTERKEY"%>
       <td><a href="/students/<%= student.id %>/edit">Edit Student Profile</a></td>
         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
          <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
@@ -42,6 +48,7 @@
       <td><a href="/students/<%= student.id %>/destroy">Delete Student Profile</a></td>
     </tr>
   <% end %>
+    <%end%>
   </tbody>
 </table>
 

@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  get '/' => 'application#home'
+  get '/' => 'sessions#new'
+  get '/sessions/new' => 'sessions#new'
+  get '/sessions/create' => 'sessions#create'
+  get '/sessions/destroy' => 'sessions#destroy'
+  get '/home' => 'application#home'
   get '/about_class' => 'application#ac'
   get '/new_teacher' => 'teachers#new'
   get '/create_teacher' => 'teachers#create'
