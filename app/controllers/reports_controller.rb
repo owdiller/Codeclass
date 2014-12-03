@@ -21,11 +21,11 @@ class ReportsController < ApplicationController
     @report.date = params[:date]
 
     if @report.save
-      redirect_to "/reports/#{ @report.id }", :notice => "Report Saved!"
+      redirect_to "/reports/#{ @report.id }/rehcf349ytgfoisdjf34807tupqu0U0Y3RYTTYONHVBYOUE45554ffRYTOTJ34dfsg1111155", :message => "Report Saved!"
       
     else
       
-      render 'new', :notice => "Something Went Wrong, Retry Report."
+      render 'new', :message => "Something Went Wrong, Retry Report."
     end
   end
 
@@ -40,7 +40,7 @@ class ReportsController < ApplicationController
     @report.date = params[:date]
 
     if @report.save
-      redirect_to "/reports/#{ @report.id }"
+      redirect_to "/reports/#{ @report.id }/rehcf349ytgfoisdjf34807tupqu0U0Y3RYTTYONHVBYOUE45554ffRYTOTJ34dfsg1111155"
     else
       render 'edit'
     end

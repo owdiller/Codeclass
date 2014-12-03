@@ -1,52 +1,10 @@
 <h1>Teachers</h1>
-      <% if session['username'] == "MASTERKEY"%>
-<p><a href="/new_teacher">Add a New Teacher</a></p>
-<%end%>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-            <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
-         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
-         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>  
-         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
-      <th>Profile Picture</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
-  <% @teachers.each do |teacher| %>
-    <tr>
-          <td><%= teacher.name %></td>
-      <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
-         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
-         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>  
-         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
-          <td><img src="<%= teacher.img %>" height=100px width=100px></td>
+<p><a href="/new_teacher/fermiomt54t902340tncvdfhjfoh805thery457uhjthk7785y7n0cvgh45outvturgvdfsg7">Add a New Teacher</a></p>
 
-      <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
-         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
-         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>  
-         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
-          <td><a href="/teachers/<%= teacher.id %>">About</a>
-        </td>
-            <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
-         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
-         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>  
-         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
-            <% if session['username'] == "MASTERKEY"%>
-      <td><a href="/teachers/<%= teacher.id %>/edit">Edit Profile</a></td>
-            <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>      
-         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
-         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td>  
-         <td> <p>&nbsp;&nbsp;&nbsp;&nbsp;        </p>  </td> 
-      <td><a href="/teachers/<%= teacher.id %>/destroy">Delete Profile</a></td>
-    </tr>
-    <%end%>
-  <% end %>
-  </tbody>
-</table>
+
+          <a href="/teachers/<%= teacher.id %/asdfjkhgvhjcbvhsdgwerojteruyt596iusgfrutfuksdh7t34yfduisayfuasdkhfdfuayf2>">About</a>
+
+
+
 

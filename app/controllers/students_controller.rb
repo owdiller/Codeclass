@@ -22,7 +22,7 @@ class StudentsController < ApplicationController
       @student.password_confirmation = params[:password_confirmation]
 
     if @student.save
-      redirect_to "/students/#{ @student.id }", :notice => "Student Profile Created"
+      redirect_to "/students/#{ @student.id }/fygfer789ygrdfyugighdfjyt895uwygfdghudfiytoshwygerwygerisygsepgherwhtgesw", :message => "Student Profile Created"
     else
       render 'new'
     end
@@ -42,7 +42,7 @@ class StudentsController < ApplicationController
     @student.password_confirmation = params[:password_confirmation]
 
     if @student.save
-      redirect_to "/students/#{ @student.id }", :notice => "updated!"
+      redirect_to "/students/#{ @student.id }/fygfer789ygrdfyugighdfjyt895uwygfdghudfiytoshwygerwygerisygsepgherwhtgesw", :message => "updated!"
     else
       render 'edit'
     end
@@ -53,6 +53,6 @@ class StudentsController < ApplicationController
     @student.destroy
 
 
-    redirect_to "/students", :notice => "Student Deleted! IRON LAW!"
+    redirect_to "/students", :message => "Student Deleted! IRON LAW!"
   end
 end

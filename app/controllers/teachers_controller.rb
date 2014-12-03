@@ -19,7 +19,7 @@ class TeachersController < ApplicationController
     @teacher.bio = params[:bio]
 
     if @teacher.save
-      redirect_to "/teachers/#{ @teacher.id }"
+      redirect_to "/teachers/#{ @teacher.id }/asdfjkhgvhjcbvhsdgwerojteruyt596iusgfrutfuksdh7t34yfduisayfuasdkhfdfuayf2"
     else
       render 'new'
     end
@@ -37,7 +37,7 @@ class TeachersController < ApplicationController
     @teacher.bio = params[:bio]
 
     if @teacher.save
-      redirect_to "/teachers/#{ @teacher.id }"
+      redirect_to "/teachers/#{ @teacher.id }/asdfjkhgvhjcbvhsdgwerojteruyt596iusgfrutfuksdh7t34yfduisayfuasdkhfdfuayf2"
     else
       render 'edit'
     end

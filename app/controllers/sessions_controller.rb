@@ -7,15 +7,15 @@ class SessionsController < ApplicationController
     u = Student.find_by_username(params['username'])
    if u && u.authenticate(params['password'])
      session['username'] = params['username']
-     redirect_to "/home", :notice => "signed in"
+     redirect_to "/home", :message => "signed in"
    else
-     redirect_to "/", :notice => "failed to sign in"
+     redirect_to "/", :message => "failed to sign in"
    end
   end
   
   def destroy
     reset_session
-    redirect_to '/home', :notice => "Signed Out"
+    redirect_to '/home', :message => "Signed Out"
   end
 
 end
