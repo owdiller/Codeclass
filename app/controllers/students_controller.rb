@@ -6,7 +6,7 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find_by(id: params[:id])
-    @reports = Report.where(student_id: @student.id)
+    @reports = Report.where(username: @student.username)
   end
 
   def new

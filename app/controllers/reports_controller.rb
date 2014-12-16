@@ -7,7 +7,7 @@ class ReportsController < ApplicationController
 
   def show
     @report = Report.find_by(id: params[:id])
-    @student = Student.find_by(id: @report.student_id)
+    @student = Student.find_by(id: @report.username)
     render 'show'
   end
 
@@ -16,7 +16,7 @@ class ReportsController < ApplicationController
 
   def create
     @report = Report.new
-    @report.student_id = params[:student_id]
+    @report.username = params[:username]
     @report.comment = params[:comment]
     @report.date = params[:date]
 
@@ -35,7 +35,7 @@ class ReportsController < ApplicationController
 
   def update
     @report = Report.find_by(id: params[:id])
-    @report.student_id = params[:student_id]
+    @report.username = params[:username]
     @report.comment = params[:comment]
     @report.date = params[:date]
 

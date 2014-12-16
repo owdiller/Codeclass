@@ -2,8 +2,8 @@
 
 <form action="/create_report">
   <div>
-    <label for="student_idt">Student ID</label><br />
-    <input id="student_id" name="student_id" type="text" placeholder= "ID goes here"/>
+    <label for="username">Student ID</label><br />
+    <input id="username" name="username" type="text" value= "<%= session['username'] %>"/>
   </div>
   <div>
     <label for="comment">Report</label><br />
