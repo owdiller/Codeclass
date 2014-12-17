@@ -3,7 +3,11 @@
 <form action="/reports/<%= @report.id %>/update">
   <div>
     <label for="username">Student ID</label><br />
-    <input id="username" name="username" value="<%= @report.username  %>" type="text" />
+    <select input id="username" name="username" >
+      <option>
+        <%= @report.username %>
+      </option> 
+      </select>
   </div>
   <div>
     <label for="comment">Report</label><br />
