@@ -21,10 +21,10 @@
   <% if session['username']  %>
   <br>
   <strong> Your Signed in, <%= session['username'] %> </strong>
-  <a href="/sessions/destroy">Sign out</a>
+   <a href="/sessions/destroy"><button type="button" class="glyphicon glyphicon-road">Sign out</button></a>
   <%else%>
   <br>
-     <a href="/">Sign In</a>
+     <a href="/"><button type="button" class="glyphicon glyphicon-user">Sign in</button></a>
   <%end%>
 </span>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
