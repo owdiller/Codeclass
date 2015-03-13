@@ -26,4 +26,5 @@ Rails.application.routes.draw do
   get '/students/:id/edit/efhugfrysdhgkhfuhfrhgfu9yhgeriogh89dfleduf8wajefyerrtuter89wefjfoyerf8owe' => 'students#edit'
   get '/students/:id/update' => 'students#update'
   get '/students/:id/destroy/cbasdiflshkjxcnxcnxzmcbneuighsahtiuerhgjdfsygoe4yt895679346534897543sdf11' => 'students#destroy'
+  get '/picture' => 'application#pic'
 end

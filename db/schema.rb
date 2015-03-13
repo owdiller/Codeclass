@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(version: 20141216031046) do
 
   create_table "reports", force: true do |t|
+    t.integer  "student_id"
     t.string   "comment"
     t.string   "date"
     t.datetime "created_at"

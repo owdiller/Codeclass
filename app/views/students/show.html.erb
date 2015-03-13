@@ -1,10 +1,10 @@
 
 <% if session['username'] == @student.username%>
-<h1>Student #<%= @student.id %></h1>
-<h2>Your ID is <%= @student.id %> ... use this to tag your assignments! </h2>
+<h1>Member <%= @student.username %></h1>
+<h2>Your ID is <%= @student.id %></h2>
 <%end%>
 <% if session['username'] == "MASTERKEY"%>
-<h3> This student's ID is <%=  @student.id  %></h3>
+<h3> This Member's ID is <%=  @student.id  %></h3>
 <%end%>
 <div>
   <strong>Name</strong>:<br />
@@ -26,11 +26,11 @@
 <br>
 <br>
 <% if session['username'] == "MASTERKEY"%>
-<h5> Reports by <em><%=@student.username%></em>:  </h5>
+<h5> Status by <em><%=@student.username%></em>:  </h5>
 <br>
 <ul>
   <% @reports.each do |report| %>
-  <li>I accomplished:<u> <%= report.comment %> </u><b>on <%= report.date %></b></li>
+  <li>Status, accomplished:<u> <%= report.comment %> </u><b>on <%= report.date %></b></li>
   <br>
   <% end %>
 </ul>
@@ -40,18 +40,18 @@
 <br>
 <br>
 <% if session['username'] == @student.username%>
-<h5> Reports by <em><%=@student.username%></em>:  </h5>
+<h5> Status by <em><%=@student.username%></em>:  </h5>
 <br>
 <ul>
   <% @reports.each do |report| %>
-  <li>I accomplished:<u> <%= report.comment %> </u><b>on <%= report.date %></b></li>
+  <li>Status, accomplished:<u> <%= report.comment %> </u><b>on <%= report.date %></b></li>
   <br>
   <% end %>
 </ul>
 <%end%>
 
 
-<a href="/students/hwerohgwerughsuifbhtxcghushu9fheruyterogfsdhfhsdhteygeruthytweryryerge33g">Return to Students index</a> <% if session['username'] == @student.username%>|
+<a href="/students/hwerohgwerughsuifbhtxcghushu9fheruyterogfsdhfhsdhteygeruthytweryryerge33g">Return to Members index</a> <% if session['username'] == @student.username%>|
 <a href="/students/<%= @student.id %>/edit/efhugfrysdhgkhfuhfrhgfu9yhgeriogh89dfleduf8wajefyerrtuter89wefjfoyerf8owe">Edit Profile</a> <%end%><% if session['username'] == "MASTERKEY"%>|
 <a href="/students/<%= @student.id %>/destroy/cbasdiflshkjxcnxcnxzmcbneuighsahtiuerhgjdfsygoe4yt895679346534897543sdf11">Delete Profile</a>
 <%end%>
