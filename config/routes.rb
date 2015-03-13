@@ -27,4 +27,5 @@ Rails.application.routes.draw do
   get '/students/:id/update' => 'students#update'
   get '/students/:id/destroy/cbasdiflshkjxcnxcnxzmcbneuighsahtiuerhgjdfsygoe4yt895679346534897543sdf11' => 'students#destroy'
   get '/picture' => 'application#pic'
+  get '/stream' => 'application#stream'
 end
